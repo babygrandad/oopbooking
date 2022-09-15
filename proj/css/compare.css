@@ -1,0 +1,80 @@
+#rightForm{
+    text-align: left;
+}
+
+#leftForm{
+    text-align: right;
+}
+
+.choiceDetails{
+    text-align: center;
+}
+
+.fa-circle-xmark{
+    color: red;
+}
+
+.fa-circle-check{
+    color: green;
+}
+
+.featureBox{
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.featureBox:nth-child(odd){
+    background-color: rgb(235, 255, 255);
+}
+
+.choiceStatus{
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.choiceStatus:nth-child(odd){
+    background-color: rgb(235, 255, 255);
+}
+
+.finalDecision{
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid black;
+}
+
+.finalButtonContainer{
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.indicator{
+    height: 50px;
+    display: flex;
+    align-items: center;
+}
+
+.right-indicator{
+    justify-content: end;
+}
+
+.instruction{
+    height: 50px;
+    text-align: center;
+}
+
+.finalDecision p {
+    margin-right: 10px;
+}
+
+p{
+    padding: 0;
+    margin: 0;
+}

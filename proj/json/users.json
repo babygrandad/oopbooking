@@ -1,0 +1,38 @@
+[
+    {
+        "First_Name": "asd",
+        "Last_Name": "asd",
+        "Email": "a@b.com",
+        "Password": "$2y$10$fL0hvgSu.WZpzIsUumtiROd1gQo\/ImGu5SExxDb.M1vpXTSVSJsCW"
+    },
+    {
+        "First_Name": "larry",
+        "Last_Name": "king",
+        "Email": "larry@gucci.com",
+        "Password": "$2y$10$gS\/t14h7H5dfxA6nC2i6mO68Nd8zrJRdDHSie8I38bb3D47zMz91G"
+    },
+    {
+        "First_Name": "steve",
+        "Last_Name": "puffin",
+        "Email": "steve@gucci.com",
+        "Password": "$2y$10$mvWP4Jj.G4P6Bp2VYy0dK.3Cyfmcj\/Vo8YVcS4SpEWb91Dp88Vq5W"
+    },
+    {
+        "First_Name": "jack",
+        "Last_Name": "fleming",
+        "Email": "jack@gucci.com",
+        "Password": "$2y$10$jpT8mWorCJFbnkHK22yX6uIXjDJ8GtkKKNbn0rvfKnsbvwuHQ7knK"
+    },
+    {
+        "First_Name": "marry",
+        "Last_Name": "poppins",
+        "Email": "marry@gucci.com",
+        "Password": "$2y$10$nFCslN\/S8WOv\/VGzsE5mpu65JnblmAIGYCLHMwKlNlY8X14\/7xiVi"
+    },
+    {
+        "First_Name": "billy",
+        "Last_Name": "joel",
+        "Email": "billy@gucci.com",
+        "Password": "$2y$10$AZDNpCEjl5zOzKObuaIe\/ugORek3Fulmeuls357Q9vgGjtokv1Vwm"
+    }
+]
