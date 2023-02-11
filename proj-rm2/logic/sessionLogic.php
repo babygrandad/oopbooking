@@ -19,8 +19,8 @@ if(isset($_SESSION['stayDuration'])){
 
 }
 
-if(isset($_SESSION['hotel'])){
-    $hotel = $_SESSION['hotel'];
+if(isset($_SESSION['hotel_name'])){
+    $hotel_name = $_SESSION['hotel_name'];
 
 }
 

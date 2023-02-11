@@ -1,6 +1,9 @@
 <?php 
 session_start();
 require_once('logic/enforceLogin.php');
+    if (isset($_GET['hotel_name'])) {
+        $_SESSION['hotel_name'] = $_GET['hotel_name'];
+    } 
 require_once('logic/sessionLogic.php');
 ?>
 
@@ -24,7 +27,7 @@ echo (page_title('Book Now'));
 ?>
         <form action="<?= $_SERVER['PHP_SELF'] ?>" method="post" autocomplete="off">
             <div class="mb-5 form-floating">
-            <select class="form-select" name="" id="" >
+            <select class="form-select" name="hotel" id="" >
                 <?php include_once('templates/hotelOptions.php')?>
             </select>
                 <label for="" class="form-label">Hotel</label>

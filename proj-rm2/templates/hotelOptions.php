@@ -2,7 +2,7 @@
 require_once('logic/fetchJSON.php');
 /*turn this to a function to be reused in the bookstay.php & compare page for
  the right choice options at te top*/
-$selected_option = "Columbia Hotel";
+$selected_option = $hotel_name;
 foreach (get_hotels() as $hotel) {?>
 
     <option value="<?= $hotel['name'] ?>"
