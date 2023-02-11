@@ -14,8 +14,8 @@ if(isset($_SESSION['email'])){
 
 }
 
-if(isset($_SESSION['stayDuration'])){
-    $stayDuration = $_SESSION['stayDuration'];
+if(isset($_SESSION['stay_duration'])){
+    $stayDuration = $_SESSION['stay_duration'];
 
 }
 
@@ -34,10 +34,8 @@ if(isset($_SESSION['checkout'])){
 
 }
 
-if(isset($_SESSION['hotelArray'])){
-    $hotelData = $_SESSION['hotelArray'];
-
+//debate if you need to have this session variable saved.
+if(isset($_SESSION['price'])){
+    $price = $_SESSION['price'];
 }
-
-
 ?>

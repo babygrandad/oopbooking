@@ -1,7 +1,7 @@
 <?php
 include_once('logic/fetchJSON.php');
 
-$hotelSet = hotel_choices($hotel_name, "Gazella Guest House" );
+$hotelSet = hotel_choices($hotel_name, $secondChoice );
 function hotel_choices($hotel1, $hotel2) {
     
     $hotelSet = ["", ""];
@@ -41,19 +41,6 @@ foreach ($hotelSet[0]['features'] as $featureName => $hotel1Feature) {
         $rChoice = $hotel2Feature;
     };
 
-
-    // if($hotel1Feature === true){
-    //     $lChoice = $green_check;
-    // }else{
-    //     $lChoice = $red_cross;
-    // };
-
-    // if($hotel2Feature === true){
-    //     $rChoice = $green_check;
-    // }else{
-    //     $rChoice = $red_cross;
-    // };
-
   echo '<div class="row container-fluid m-auto">
       <div class="col-4 border table-rows">
           <span>' . $lChoice . '</span>
@@ -66,16 +53,21 @@ foreach ($hotelSet[0]['features'] as $featureName => $hotel1Feature) {
       </div>
   </div>';
 }
+
+$hotel_daily_rate = $hotelSet[0]['features']['daily_rate'];
+
 ?>
 
+<!-- you need to add in the $stayDuration variable before making the 
+echo statements in the span tags active  -->
 <div class="row container-fluid m-auto">
       <div class="col-4 border table-rows">
-          <span><?php //echo(($hotelSet[0]['features']['price'] * $stayDuration))?></span>
+          <span><?php echo(($hotel_daily_rate * $stayDuration))?></span>
       </div>
       <div class="col-4 border table-rows">
           <span>Cost</span>
       </div>
       <div class="col-4 border table-rows">
-          <span><?php //echo(($hotelSet[1]['features']['price'] * $stayDuration))?></span>
+          <span><?php echo(($hotelSet[1]['features']['daily_rate'] * $stayDuration))?></span>
       </div>
   </div>

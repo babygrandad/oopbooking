@@ -3,7 +3,23 @@ session_start();
 require_once('logic/enforceLogin.php');
     if (isset($_GET['hotel_name'])) {
         $_SESSION['hotel_name'] = $_GET['hotel_name'];
-    } 
+    }
+
+    if(isset($_POST['bookNow'])){
+        $_SESSION['hotel_name'] = $_POST['hotel'];
+        $_SESSION['checkin'] = $_POST['checkin'];
+        $_SESSION['checkout'] = $_POST['checkout'];
+
+        $date1 = new DateTime($_POST['checkin']);
+        $date2 = new DateTime($_POST['checkout']);
+        $interval = $date1->diff($date2);
+        //echo $interval->format('The difference between the two dates is %a days');
+
+        $_SESSION['stay_duration'] = $interval->d;
+
+        header('location: compare.php');
+    }
+
 require_once('logic/sessionLogic.php');
 ?>
 
@@ -43,7 +59,7 @@ echo (page_title('Book Now'));
                 <label for="" class="form-label">Check out Date</label>
             </div>
             <div class="mb-5 form-floating">
-                <input type="text" name="StayDuration" id="" class="form-control" disabled readonly>
+                <span type="text" name="StayDuration" id="" class="form-control"></span>
                 <label for="" class="form-label">Stay Duration</label>
                 <span class="fs-6 "></span>
             </div>

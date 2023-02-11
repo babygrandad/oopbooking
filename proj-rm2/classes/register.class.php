@@ -1,4 +1,5 @@
 <?php
+require('logic/fetchJSON.php');
 
 class RegisterUser
 {
@@ -8,13 +9,12 @@ class RegisterUser
     public $errors = array('name' => '', 'surname' => '', 'email' => '', 'password' => '', 'registration' => '');
     public $test;
 
-    function __construct($fName, $lName, $email, $password, $userData, $usersDataFile)
+    function __construct($fName, $lName, $email, $password)
     {
         $this->fName =  strtolower(trim($fName));
         $this->lName = strtolower(trim($lName));
         $this->email = strtolower(trim($email));
-        $this->usersDataFile = $usersDataFile;
-        $this->userData = $userData;
+        $this->userData = get_users();
         $this->password = trim($password);
         $this->encPassword = password_hash($this->password, PASSWORD_DEFAULT);
 
@@ -87,11 +87,6 @@ class RegisterUser
         } else {
             return true;
         }
-        // else{
-        //     if($this->password){
-        //         $this->errors['password'] = "Password must meet the following requirements:at least 8 char, at least 1 special char, at least 1 uppercase, at least 1 lowercase.";
-        //     }
-        // }
     }
 
     private function commitUser()
@@ -99,7 +94,7 @@ class RegisterUser
         if ($this->checkNameField() && $this->checkSurnameField() && $this->checkEmailField() && $this->checkEmailExist() && $this->checkPasswordField() != false) {
 
             array_push($this->userData, $this->newUser);
-            if (file_put_contents($this->usersDataFile, json_encode($this->userData, JSON_PRETTY_PRINT))) {
+            if (file_put_contents('json/users.json', json_encode($this->userData, JSON_PRETTY_PRINT))) {
                 $this->setSession();
             } else {
 
