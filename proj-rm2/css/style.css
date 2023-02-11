@@ -1,0 +1,36 @@
+main{
+    max-height: 100vh;
+    position: relative;
+}
+
+/* width for the cards on dashboard */
+.card-container{
+    max-width: 800px;
+}
+
+/* centering of the form continers */
+.form-container{
+    padding: 20px;
+}
+
+/* height for the coulums holding the previous bookings and hotels on the dashboard */
+.dashboard-columns-wrap{
+    max-height: 100vh;
+    overflow-y: scroll;
+}
+
+.dashboard-columns-wrap::-webkit-scrollbar{
+    width: 0;
+}
+
+/* compare table, Table styling */
+.table-rows{
+    min-height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+footer{
+    min-height: 40px;
+}

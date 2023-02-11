@@ -40,5 +40,11 @@
         "Last_Name": "ming",
         "Email": "joeming@gmail.com",
         "Password": "$2y$10$QEVM3D5SvM9t\/bQ7oASiDehx\/ea.pBzgSwyfzpLQrdcogqg5SsBpi"
+    },
+    {
+        "First_Name": "joa",
+        "Last_Name": "soap",
+        "Email": "joasoap@gmail.com",
+        "Password": "$2y$10$Qq7kUfzSGm..9vKLx2yJDeBXK9xEmbvTTvQN5PWbLdIbyWa0mDkJi"
     }
 ]

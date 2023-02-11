@@ -1,0 +1,164 @@
+[
+  {
+    "name": "Melanie Hotel",
+    "features": {
+      "wifi": true,
+      "pool": true,
+      "bar": true,
+      "parking": true,
+      "kid_friendly": false,
+      "room_service": false,
+      "day_care": false,
+      "spa": true,
+      "netflix": true,
+      "kitchen": true,
+      "daily_rate": 1025
+    },
+    "description": "Lorem ipsum, dolor sit amet.",
+    "image_name": "Melanie Hotel.jpg"
+  },
+  {
+    "name": "Columbia Hotel",
+    "features": {
+      "wifi": true,
+      "pool": true,
+      "bar": true,
+      "parking": true,
+      "kid_friendly": true,
+      "room_service": false,
+      "day_care": true,
+      "spa": false,
+      "netflix": true,
+      "kitchen": true,
+      "daily_rate": 1300
+    },
+    "description": "Lorem ipsum, dolor sit amet.",
+    "image_name": "Columbia hotel.jpg"
+  },
+  {
+    "name": "Blue Jay Hotel",
+    "features": {
+      "wifi": true,
+      "pool": true,
+      "bar": true,
+      "parking": true,
+      "kid_friendly": false,
+      "room_service": true,
+      "day_care": false,
+      "spa": false,
+      "netflix": true,
+      "kitchen": false,
+      "daily_rate": 740
+    },
+    "description": "Lorem ipsum, dolor sit amet.",
+    "image_name": "Blue Jay Hotel.jpg"
+  },
+  {
+    "name": "Jade Hotel",
+    "features": {
+      "wifi": true,
+      "pool": false,
+      "bar": false,
+      "parking": true,
+      "kid_friendly": false,
+      "room_service": true,
+      "day_care": false,
+      "spa": false,
+      "netflix": true,
+      "kitchen": false,
+      "daily_rate": 750
+    },
+    "description": "Lorem ipsum, dolor sit amet.",
+    "image_name": "Jade Hotel.jpg"
+  },
+  {
+    "name": "Mirrors Hotel",
+    "features": {
+      "wifi": true,
+      "pool": true,
+      "bar": true,
+      "parking": true,
+      "kid_friendly": false,
+      "room_service": true,
+      "day_care": false,
+      "spa": true,
+      "netflix": true,
+      "kitchen": true,
+      "daily_rate": 870
+    },
+    "description": "Lorem ipsum, dolor sit amet.",
+    "image_name": "Mirrors Hotel.jpg"
+  },
+  {
+    "name": "Sandbank Villa",
+    "features": {
+      "wifi": true,
+      "pool": false,
+      "bar": false,
+      "parking": true,
+      "kid_friendly": true,
+      "room_service": true,
+      "day_care": false,
+      "spa": false,
+      "netflix": true,
+      "kitchen": true,
+      "daily_rate": 1050
+    },
+    "description": "Lorem ipsum, dolor sit amet.",
+    "image_name": "Sandbank Villa.jpg"
+  },
+  {
+    "name": "Gazella Guest House",
+    "features": {
+      "wifi": true,
+      "pool": false,
+      "bar": false,
+      "parking": true,
+      "kid_friendly": false,
+      "room_service": true,
+      "day_care": false,
+      "spa": false,
+      "netflix": true,
+      "kitchen": false,
+      "daily_rate": 680
+    },
+    "description": "Lorem ipsum, dolor sit amet.",
+    "image_name": "Gazella Guest House.jpg"
+  },
+  {
+    "name": "Seek Safari",
+    "features": {
+      "wifi": true,
+      "pool": true,
+      "bar": true,
+      "parking": true,
+      "kid_friendly": false,
+      "room_service": true,
+      "day_care": false,
+      "spa": true,
+      "netflix": true,
+      "kitchen": false,
+      "daily_rate": 800
+    },
+    "description": "Lorem ipsum, dolor sit amet.",
+    "image_name": "Seek Safari.jpg"
+  },
+  {
+    "name": "Indigo Hotel",
+    "features": {
+      "wifi": true,
+      "pool": false,
+      "bar": true,
+      "parking": true,
+      "kid_friendly": false,
+      "room_service": true,
+      "day_care": false,
+      "spa": false,
+      "netflix": false,
+      "kitchen": false,
+      "daily_rate": 460
+    },
+    "description": "Lorem ipsum, dolor sit amet.",
+    "image_name": "Indigo Hotel.jpg"
+  }
+]
