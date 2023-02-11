@@ -28,7 +28,9 @@ echo (page_title('Book Now'));
         <form action="<?= $_SERVER['PHP_SELF'] ?>" method="post" autocomplete="off">
             <div class="mb-5 form-floating">
             <select class="form-select" name="hotel" id="" >
-                <?php include_once('templates/hotelOptions.php')?>
+                <?php include_once('templates/hotelOptions.php');
+                hotel_select_options($hotel_name)
+                ?>
             </select>
                 <label for="" class="form-label">Hotel</label>
             </div>

@@ -1,7 +1,7 @@
 <?php
 include_once('logic/fetchJSON.php');
 
-$hotelSet = hotel_choices("Seek Safari", "Gazella Guest House" );
+$hotelSet = hotel_choices($hotel_name, "Gazella Guest House" );
 function hotel_choices($hotel1, $hotel2) {
     
     $hotelSet = ["", ""];

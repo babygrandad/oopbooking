@@ -21,7 +21,9 @@ echo (page_title("Confirm"));
     <form action="<?= $_SERVER['PHP_SELF'] ?>" method="post">
         <div class="mb-4 form-floating col-11 m-auto">
             <select class="form-select" name="" id="">
-            <?php include_once('templates/hotelOptions.php')?>
+            <?php include_once('templates/hotelOptions.php');
+            hotel_select_options('');
+            ?>
             </select>
             <label class="text-primary" for="">See other options</label>
         </div>
