@@ -1,6 +1,3 @@
-<?php
-$price = $hotel_daily_rate * $stayDuration;
-?>
 
 <div class="p-2 mb-4 border rounded bg-light m-auto mt-5 col-xs-10 col-md-6 col-lg-4">
     <h4>Booking Information</h4>

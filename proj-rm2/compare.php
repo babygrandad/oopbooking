@@ -2,9 +2,10 @@
 session_start();
 require_once('logic/enforceLogin.php');
 
+$price;
+
 if(isset($_POST["final_choice"])){
     $_SESSION['hotel_name']= $_POST["final_choice"];
-    $_SESSION['price'] = $price;
 }
 
 if(isset($_POST["second_choice"])){

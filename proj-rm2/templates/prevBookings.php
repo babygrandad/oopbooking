@@ -1,7 +1,8 @@
 <div class="col p-2 mb-4 border rounded bg-light">
-    <h4>hotel name</h4>
-    <p>checkin - checkout</p>
-    <p>stay duration</p>
-    <p>price</p>
-    <p>status</p>
+    <span class="fw-bold">Name: <?= $fName .' '. $lName ?></span><br>
+    <span class="fst-italic fw-semibold">Email: <?= $email?></span><br>
+    <span>checkin - checkout</span><br>
+    <span>stay duration</span><br>
+    <span>price</span><br>
+    <span>status</span>
 </div>

@@ -55,14 +55,15 @@ foreach ($hotelSet[0]['features'] as $featureName => $hotel1Feature) {
 }
 
 $hotel_daily_rate = $hotelSet[0]['features']['daily_rate'];
-
+$price = $hotel_daily_rate * $stayDuration;
+$_SESSION['price'] = $price;
 ?>
 
 <!-- you need to add in the $stayDuration variable before making the 
 echo statements in the span tags active  -->
 <div class="row container-fluid m-auto">
       <div class="col-4 border table-rows">
-          <span><?php echo(($hotel_daily_rate * $stayDuration))?></span>
+          <span><?php echo($price)?></span>
       </div>
       <div class="col-4 border table-rows">
           <span>Cost</span>

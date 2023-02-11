@@ -1,27 +1,27 @@
 <?php
+session_start();
 require_once('logic/fetchJSON.php');
+require('logic/sessionLogic.php');
 
-// Decode the JSON data
-$data = get_users();
+// Store incoming array 
+$array[] = get_bookings();
 
-// Find the index of the item you want to update
-$index = -1;
-for ($i = 0; $i < count($data); $i++) {
-    if ($data[$i]['Email'] == 'a@b.com') {
-        $index = $i;
-        break;
-    }
-}
 
-// Update the data
-if ($index != -1) {
-    $data[$index]['First_Name'] = 'Adolf';
-    $data[$index]['Last_Name'] = 'BoB';
-}
+$newBooking =[
+"email" => $email,
+"hotel_name" => $hotel_name,
+"checkin" => $checkin,
+"checkout" => $checkout,
+"stay_duration" => $stayDuration,
+"price" => $price
+];
 
-// Encode the data back to JSON
-$json = json_encode($data);
+array_push($array,$newBooking);
 
-// Write the data back to the file
-file_put_contents('json/users.json', $json);
+// Encode the array back into a JSON string
+$json = json_encode($array);
+
+// Write the JSON string back to the file
+file_put_contents("json/bookings.json", $json, JSON_PRETTY_PRINT);
+
 ?>
