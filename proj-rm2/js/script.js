@@ -4,16 +4,6 @@
  // Set the height of dashboard-columns-wrap class
  $(".dashboard-columns-wrap").css("height", "calc(100vh - " + navbarHeight + "px)");
 
-
-//  function calculate_stay(dayIn, dayOut) {
-//     var date1 = new Date(dayIn);
-//     var date2 = new Date(dayOut);
-//     var diffTime = date2.getTime() - date1.getTime();
-//     var diffDays = diffTime / (1000 * 3600 * 24);
-
-//     return diffDays;
-// }
-
 const bookingForm = document.getElementById('bookingForm');
 const checkIn = document.getElementById('check_in_input');
 const checkOut = document.getElementById('check_out_input');
@@ -23,7 +13,7 @@ let inDateWarning = document.getElementById('inDateWarning');
 let outDateWarning = document.getElementById('outDateWarning');
 
 
-bookingForm.addEventListener('submit', (e) =>{
+bookingForm.addEventListener('submit', function (e){
     let hasError = false;
 
     // Check if check in date is selected
@@ -45,7 +35,7 @@ bookingForm.addEventListener('submit', (e) =>{
     }
 
     //check if check in date is valid
-    if(validateCheckInDate() && validateCheckOutDate() != true){
+    if(validateCheckInDate() === false && validateCheckOutDate() === false ){
         e.preventDefault();
     }
     
@@ -63,10 +53,10 @@ function validateCheckInDate() {
     
      if(difference < 0){
         inDateWarning.innerHTML = 'Please pick a checkin date from today';
-        validity = false
+        validity = false;
     }else{
         stayWarning.innerHTML = '';
-        validity = true
+        validity = true;
     }
 
     return validity;
@@ -92,6 +82,7 @@ function validateCheckOutDate() {
     return validity;
 }
 
+
 function calculate_stay(dayIn, dayOut) {
     var date1 = new Date(dayIn);
     var date2 = new Date(dayOut);
@@ -102,17 +93,36 @@ function calculate_stay(dayIn, dayOut) {
     return diffDays;
 }
 
+function validate_check_in(dayIn) {
+    var date1 = new Date(dayIn);
+    var date2 = new Date();
+    var diffTime = date2.getTime() - date1.getTime();
+    var diffDays = Math.floor(diffTime / (1000 * 3600 * 24));
+
+    console.log(diffDays);
+    return diffDays;
+}
+
+function validate_check_out(dayIn,dayOut) {
+    var date1 = new Date(dayIn);
+    var date2 = new Date(dayOut);
+    var diffTime = date2.getTime() - date1.getTime();
+    var diffDays = Math.floor(diffTime / (1000 * 3600 * 24));
+
+    console.log(diffDays);
+    return diffDays;
+}
 
 checkIn.addEventListener('change', function() {
     if (checkIn.value && checkOut.value) {
-      // Both date inputs are not empty, do something here
+      // Both date inputs are not empty, display the staying duration
         durationDisplay.value =  calculate_stay(checkIn.value,checkOut.value);
     }
   });
   
   checkOut.addEventListener('change', function() {
     if (checkIn.value && checkOut.value) {
-      // Both date inputs are not empty, do something here
+      // Both date inputs are not empty, display the staying duration
       durationDisplay.value =  calculate_stay(checkIn.value,checkOut.value);
     }
   });

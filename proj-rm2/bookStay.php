@@ -39,7 +39,7 @@ echo (page_title('Book Now'));
 <?php echo (open_form_container('Book your stay'));
 ?>
         <form id="bookingForm" action="<?= $_SERVER['PHP_SELF'] ?>" method="post" autocomplete="off">
-            <div class="mb-5 form-floating">
+            <div class="mb-4 form-floating">
             <select class="form-select" name="hotel" id="" >
                 <?php include_once('templates/hotelOptions.php');
                 hotel_select_options($hotel_name)
