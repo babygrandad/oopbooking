@@ -1,4 +1,4 @@
-<?php
+4<?php
 require_once('classes/login.class.php');
 require_once('logic/enforceLogout.php');
 
@@ -26,20 +26,20 @@ echo(page_title('Log in'));
     ?>
 
     <form action="<?= $_SERVER['PHP_SELF'] ?>" method="post">
-        <div class="mb-5 form-floating">
+        <div class="mb-4 form-floating">
             <input type="email" name="email" id="" class="form-control" placeholder="Email" value='<?php if (isset($_POST['login'])) {echo @$user->getEmail();} ?>' >
             <label for="" class="form-label">Email</label>
             <span class="fs-6 "></span>
         </div>
-        <div class="mb-5 form-floating">
+        <div class="mb-4 form-floating">
             <input type="password" name="password" id="" class="form-control" placeholder="Password">
             <label for="" class="form-label">Password</label>
             <span class="fs-6 text-danger"><?php echo @$user->errors['password'] ?></span>
         </div>
-        <div class="mb-5 form-group d-grid">
+        <div class="mb-4 form-group d-grid">
             <button class="btn btn-lg btn-secondary" type="submit" name="login">Sign in</button>
         </div>      
-        <div class="mb-5 form-group">
+        <div class="mb-4 form-group">
             <label for="">Dont have an account? <a href="register.php">Sign Up</a></label>
         </div>
     </form>
