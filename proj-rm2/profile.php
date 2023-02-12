@@ -1,7 +1,7 @@
 <?php
 session_start();
 require_once('logic/enforceLogin.php');
-require_once('logic/updateProfile.php');
+require_once('logic/updateJSON.php');
 
 if(isset($_POST['updateProfile'])){
     update_user(

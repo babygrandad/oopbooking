@@ -1,11 +1,14 @@
 <?php
 session_start();
 require_once('logic/enforceLogin.php');
-
+include('logic/commitBooking.php');
+require_once('logic/calculateDates.php');
 $price;
 
 if(isset($_POST["final_choice"])){
     $_SESSION['hotel_name']= $_POST["final_choice"];
+    require('logic/sessionLogic.php');
+    commit_booking($email,$hotel_name,$checkin,$checkout,$stayDuration,$price);
 }
 
 if(isset($_POST["second_choice"])){

@@ -26,3 +26,28 @@ function update_user($email,$fName,$lName){
     // Write the data back to the file
     file_put_contents('json/users.json', $json, JSON_PRETTY_PRINT);
 }
+
+function update_booking($email,$status,$bookingID){
+    // Decode the JSON data
+    $data = get_bookings();
+
+    // Find the index of the item you want to update
+    $index = -1;
+    for ($i = 0; $i < count($data); $i++) {
+        if ($data[$i]['email'] == $email && $data[$i]['booking_id'] == $bookingID) {
+            $index = $i;
+            break;
+        }
+    }
+
+    // Update the data
+    if ($index != -1) {
+        $data[$index]['status'] = $status;
+    }
+
+    // Encode the data back to JSON
+    $json = json_encode($data);
+
+    // Write the data back to the file
+    file_put_contents('json/bookings.json', $json, JSON_PRETTY_PRINT);
+}

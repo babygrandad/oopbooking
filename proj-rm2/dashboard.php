@@ -2,6 +2,13 @@
 session_start();
 require_once('logic/enforceLogin.php');
 require_once('logic/sessionLogic.php');
+
+if (isset($_GET['id'])) {
+    require('logic/updateJSON.php');
+    update_booking($email,"Cancelled",$_GET['id']);
+    header('location: dashboard.php');
+}
+
 ?>
 
 
@@ -31,9 +38,6 @@ echo (page_title('Dashboard'));
             <h1>Previous Bookings</h1>
             <div class="container dashboard-columns-wrap">
                 <?php
-                include('templates/prevBookings.php');
-                include('templates/prevBookings.php');
-                include('templates/prevBookings.php');
                 include('templates/prevBookings.php');
                 ?>
             </div>

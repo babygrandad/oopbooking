@@ -1,6 +1,7 @@
 <?php 
 session_start();
 require_once('logic/enforceLogin.php');
+require_once('logic/calculateDates.php');
     if (isset($_GET['hotel_name'])) {
         $_SESSION['hotel_name'] = $_GET['hotel_name'];
     }
@@ -10,12 +11,8 @@ require_once('logic/enforceLogin.php');
         $_SESSION['checkin'] = $_POST['checkin'];
         $_SESSION['checkout'] = $_POST['checkout'];
 
-        $date1 = new DateTime($_POST['checkin']);
-        $date2 = new DateTime($_POST['checkout']);
-        $interval = $date1->diff($date2);
-        //echo $interval->format('The difference between the two dates is %a days');
-
-        $_SESSION['stay_duration'] = $interval->d;
+        $_SESSION['stay_duration'] =  calculate_dates($_POST['checkin'],$_POST['checkout']);
+            
 
         header('location: compare.php');
     }
