@@ -70,7 +70,7 @@ echo (page_title('Book Now'));
 <?php echo(close_continer())
 ?>
     </main>
-
+    
 </body>
 
 
