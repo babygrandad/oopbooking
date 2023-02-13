@@ -26,12 +26,12 @@ echo(page_title('Log in'));
 
     <form action="<?= $_SERVER['PHP_SELF'] ?>" method="post">
         <div class="mb-4 form-floating">
-            <input type="email" name="email" id="" class="form-control" placeholder="Email" value='<?php if (isset($_POST['login'])) {echo @$user->getEmail();} ?>' >
+            <input type="email" name="email" class="form-control" placeholder="Email" value='<?php if (isset($_POST['login'])) {echo @$user->getEmail();} ?>' >
             <label for="" class="form-label">Email</label>
             <span class="fs-6 "></span>
         </div>
         <div class="mb-4 form-floating">
-            <input type="password" name="password" id="" class="form-control" placeholder="Password">
+            <input type="password" name="password" class="form-control" placeholder="Password">
             <label for="" class="form-label">Password</label>
             <span class="fs-6 text-danger"><?php echo @$user->errors['password'] ?></span>
         </div>
