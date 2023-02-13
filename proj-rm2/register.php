@@ -33,22 +33,22 @@ echo(page_title('Sign Up'));
 
     <form action="<?= $_SERVER['PHP_SELF'] ?>" method="post" autocomplete="off">
         <div class="mb-4 form-floating">
-            <input type="text" id="" class="form-control" placeholder="First Name"  name="fName" value='<?php if (isset($_POST['Register'])) {echo @$user->getFname();} ?>'>
+            <input type="text" class="form-control" placeholder="First Name"  name="fName" value='<?php if (isset($_POST['Register'])) {echo @$user->getFname();} ?>'>
             <label for="" class="form-label">First Name</label>
             <span class="fs-6 text-danger"><?php echo @$user->errors['name'] ?></span>
         </div>
         <div class="mb-4 form-floating">
-            <input type="text" id="" class="form-control" placeholder="Last Name" name="lName" value='<?php if (isset($_POST['Register'])) {echo @$user->getLname();} ?>'>
+            <input type="text" class="form-control" placeholder="Last Name" name="lName" value='<?php if (isset($_POST['Register'])) {echo @$user->getLname();} ?>'>
             <label for="" class="form-label">Last Name</label>
             <span class="fs-6 text-danger"><?php echo @$user->errors['surname'] ?></span>
         </div>
         <div class="mb-4 form-floating">
-            <input type="email" id="" class="form-control" placeholder="Email" name="email" value='<?php if (isset($_POST['Register'])) {echo @$user->getEmail();} ?>'>
+            <input type="email" class="form-control" placeholder="Email" name="email" value='<?php if (isset($_POST['Register'])) {echo @$user->getEmail();} ?>'>
             <label for="" class="form-label">Email</label>
             <span class="fs-6 text-danger"><?php echo @$user->errors['email'] ?></span>
         </div>
         <div class="mb-4 form-floating">
-            <input type="password" name="password" id="" class="form-control" placeholder="Password">
+            <input type="password" name="password" class="form-control" placeholder="Password">
             <label for="" class="form-label">Password</label>
             <span class="fs-6 text-danger"><?php echo @$user->errors['password'] ?></span>
         </div>
