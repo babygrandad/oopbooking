@@ -48,7 +48,7 @@ echo(page_title('Profile Update'));
             <span id="profileWarningLname" class="fs-6 text-danger"></span>
         </div>
         <div class="mb-4 form-floating">
-            <input type="email" name="email" id="" class="form-control" placeholder="Email" value="<?= $email?>" readonly>
+            <input type="email" name="email" id="" class="form-control" placeholder="Email" value="<?= $email?>" readonly disabled>
             <label for="" class="form-label">Email / ID</label>
             <span class="fs-6 "></span>
         </div>
