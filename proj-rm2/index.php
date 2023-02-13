@@ -1,4 +1,4 @@
-4<?php
+<?php
 require_once('classes/login.class.php');
 require_once('logic/enforceLogout.php');
 
