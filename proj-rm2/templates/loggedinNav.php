@@ -16,9 +16,6 @@
             <li class="nav-item">
             <a class="nav-link" href="profile.php">Profile</a>
             </li>
-            <li class="nav-item">
-            <a class="nav-link" href="compare.php">Compare</a>
-            </li>
           </ul>
           <form class="d-lg-flex col-lg-3 justify-content-lg-end text-light" action="logic/logout.php" method="post">
             <label class="form-label me-2">Hi <?= $fName." ".$lName ?></label>

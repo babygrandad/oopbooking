@@ -5,10 +5,16 @@ include('logic/commitBooking.php');
 require_once('logic/calculateDates.php');
 $price;
 
+if(!isset($_SESSION['stay_duration']) && !isset($_SESSION['hotel_name'])){
+    header('location: bookStay.php');
+}
+
 if(isset($_POST["final_choice"])){
     $_SESSION['hotel_name']= $_POST["final_choice"];
     require('logic/sessionLogic.php');
     commit_booking($email,$hotel_name,$checkin,$checkout,$stayDuration,$price);
+    unset($_SESSION['stay_duration'], $_SESSION['hotel_name'], $_SESSION['price'], $_SESSION['checkin'], $_SESSION['checkout']);
+    header('location: dashboard.php');
 }
 
 if(isset($_POST["second_choice"])){
@@ -76,7 +82,7 @@ echo (page_title("Confirm"));
     <?php include_once('templates/confirmDetails.php'); ?>
 
     <?php echo (close_continer()); ?>
-
+<script src="js/compareValidation.js" defer></script>
 </body>
 
 </html>

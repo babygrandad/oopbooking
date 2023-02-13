@@ -85,13 +85,11 @@ checkIn.addEventListener('change', function() {
       // Both date inputs are not empty, display the staying duration
         durationDisplay.value =  calculate_stay(checkIn.value,checkOut.value);
     }
-  });
+});
   
-  checkOut.addEventListener('change', function() {
+checkOut.addEventListener('change', function() {
     if (checkIn.value && checkOut.value) {
       // Both date inputs are not empty, display the staying duration
       durationDisplay.value =  calculate_stay(checkIn.value,checkOut.value);
     }
-  });
-
-
+});
